@@ -62,7 +62,6 @@ btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 //keyboard action
 document.addEventListener("keydown", function (event) {
-  console.log(event);
   if (event.key === "Escape") closeModal();
 });
 
@@ -89,7 +88,6 @@ const tabsFunction =function(){
     clicked.classList.add("operations__tab--active");
   
     //active contant
-    console.log(clicked.dataset.tab);
     document
       .querySelector(`.operation-content-${clicked.dataset.tab}`)
       .classList.add("operation-active");
@@ -113,7 +111,6 @@ const handleHover = function (e, opacity) {
       logo.style.opacity = opacity;
     });
     link.style.opacity = 1;
-    console.log(siblings);
   }
 };
 
@@ -260,7 +257,6 @@ slideLeft.addEventListener("click", prevSlide);
 
 //slider with key
 document.addEventListener("keydown", function (e) {
-  console.log(e);
   if (e.key === "ArrowRight") {
     nextSlide();
   }
